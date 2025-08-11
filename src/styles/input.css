@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@layer base {
+  select,
+  label,
+  button {
+    cursor: pointer;
+  }
+}

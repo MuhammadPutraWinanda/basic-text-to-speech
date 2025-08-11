@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text to Speech Apps</title>
+
+    <!-- TailwindCSS -->
+    <link rel="stylesheet" href="src/styles/style.css" />
+
+    <!-- My Own JS -->
+    <script defer src="src/js/main.js"></script>
+  </head>
+  <body>
+    <main class="grid md:grid-cols-[50%_50%] min-h-screen">
+      <section class="hero-image hidden md:block">
+        <img
+          src="src/img/hero-img.jpg"
+          alt="hero img"
+          class="w-full h-full object-cover object-center"
+        />
+      </section>
+      <section class="bg-slate-800 min-w-full md:min-w-0 px-3 sm:px-20 md:px-6">
+        <div class="flex items-center justify-between">
+          <h1
+            class="text-lg text-white/90 font-semibold md:text-xl lg:text-2xl"
+          >
+            Speechbot
+          </h1>
+          <img
+            src="src/img/sound-waves-icon.png"
+            class="w-15 md:w-17 lg:w-20"
+            alt="sound waves icon"
+          />
+        </div>
+        <div class="input-text mt-3">
+          <textarea
+            rows="5"
+            name="inputText"
+            id="inputText"
+            placeholder="Enter your text"
+            class="border-2 rounded-lg min-w-full border-sky-700/40 bg-slate-700/40 outline-none text-white/80 p-3 placeholder:text-sm md:placeholder:text-base"
+          ></textarea>
+          <span
+            class="hint text-white/30 text-[0.65rem] md:text-[0.7rem] lg:text-[0.75rem]"
+            >Enter your text above and hit "play". You can choose a difference
+            voice by selecting an option from the drowdown menu.</span
+          >
+        </div>
+        <div class="settings mt-5.5">
+          <h2 class="text-white/80 text-[0.78rem] mb-2">Settings</h2>
+          <div
+            class="text-sm text-white/80 bg-slate-700/40 p-1.5 rounded-lg w-fit"
+          >
+            <span
+              class="text-white/30 inline-block border-e border-e-white/30 ps-3 pe-4 py-1.5"
+              >Voice</span
+            >
+            <select
+              name="lang"
+              id="lang"
+              class="px-3.5 py-1.5 outline-none border-e border-e-white/30"
+            ></select>
+            <select
+              name="speaker"
+              id="speaker"
+              class="px-3.5 py-1.5 outline-none"
+            ></select>
+          </div>
+          <div
+            class="text-sm bg-slate-700/40 p-1.5 flex items-center rounded-lg w-fit mt-4"
+          >
+            <span class="text-white/30 border-e px-3 py-1.5">Speed</span>
+            <div class="text-white/80 px-1">
+              <label for="0.5">
+                <input
+                  type="radio"
+                  id="0.5"
+                  name="speed"
+                  value="0.5"
+                  class="hidden peer"
+                />
+                <span
+                  class="py-1 px-2.5 rounded inline-block peer-checked:bg-slate-900"
+                  >0.5x</span
+                >
+              </label>
+              <label for="0.75">
+                <input
+                  type="radio"
+                  id="0.75"
+                  name="speed"
+                  value="0.75"
+                  class="hidden peer"
+                />
+                <span
+                  class="py-1 px-2.5 rounded inline-block peer-checked:bg-slate-900"
+                  >0.75x</span
+                >
+              </label>
+              <label for="1">
+                <input
+                  type="radio"
+                  id="1"
+                  name="speed"
+                  value="1"
+                  class="hidden peer"
+                />
+                <span
+                  class="py-1 px-2.5 rounded inline-block peer-checked:bg-slate-900"
+                  >1x</span
+                >
+              </label>
+              <label for="1.5">
+                <input
+                  type="radio"
+                  id="1.5"
+                  name="speed"
+                  value="1.5"
+                  class="hidden peer"
+                />
+                <span
+                  class="py-1 px-2.5 rounded inline-block peer-checked:bg-slate-900"
+                  >1.5x</span
+                >
+              </label>
+            </div>
+          </div>
+        </div>
+        <button
+          id="btnSubmit"
+          class="min-w-full py-2.5 text-white/80 text-sm bg-gradient-to-r from-purple-800 to-blue-600 rounded-lg mt-12 lg:text-base"
+        >
+          Text to Speech
+        </button>
+      </section>
+    </main>
+  </body>
+</html>
